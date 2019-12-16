@@ -15,9 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class MyAspect {
 
     @Pointcut("execution(* com.zhengjianbin.controller..*.*(..))")
-    public void businesService(){
-        System.out.println(111111);
-    }
+    public void businesService(){}
 
     @Before("com.zhengjianbin.aop.MyAspect.businesService()")
     public void doAccessCheck(JoinPoint joinPoint){
